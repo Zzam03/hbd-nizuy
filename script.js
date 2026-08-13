@@ -51,3 +51,27 @@ opacity:0;
 `;
 
 document.head.appendChild(style);
+
+const bgMusic = document.getElementById("musicBtn");
+const music = document.getElementById("bgMusic");
+let isPlaying = false;
+
+document.getElementById("musicBtn").addEventListener("click", () => {
+  if (!isPlaying) {
+    music.play();
+    document.getElementById("musicBtn").innerHTML = "🔊 Pause Music";
+  } else {
+    music.pause();
+    document.getElementById("musicBtn").innerHTML = "🔇 Play Music";
+  }
+  isPlaying = !isPlaying;
+});
+window.addEventListener("load", () => {
+  music.volume = 0.5;
+  music.muted = true;
+  music.play();
+
+  document.body.addEventListener("click", () => {
+    music.muted = false;
+  }, { once: true });
+});

@@ -203,3 +203,18 @@ background-size:40px 40px;
 opacity:.25;
 
 }
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 30px;
+  background: #ff6b9d;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
